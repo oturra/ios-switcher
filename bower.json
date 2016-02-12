@@ -1,0 +1,21 @@
+{
+  "name": "ios-switcher",
+  "description": "iOS Switcher in pure CSS.",
+  "main": [
+    "dist/css/switcher.css",
+    "dist/sass/switcher.scss"
+  ],
+  "dependencies": {
+    "bootstrap": ">= 3.0.0"
+  },
+  "moduleType": "globals",
+  "keywords": [
+    "ios",
+    "switcher",
+    "switch"
+  ],
+  "authors": [
+    "Jhone Turra <jhonefturra@gmail.com>"
+  ],
+  "license": "MIT"
+}
