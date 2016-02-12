@@ -17,5 +17,8 @@
   "authors": [
     "Jhone Turra <jhonefturra@gmail.com>"
   ],
+  "ignore": [
+    "/.*"
+  ],
   "license": "MIT"
 }
