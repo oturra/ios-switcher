@@ -1,5 +1,38 @@
 # iOS Switcher
+Switcher like iOS switch button in pure CSS.
 
+This is a simple component that helps you make iOS style switches.
+
+Supported by modern browsers: Chrome, Firefox, Safari, Opera, IE10+
+
+![Preview](http://i.imgur.com/9GbHLuJ.jpg)
+
+## Instalation
+
+##### Standalone:
+
+```html
+<!-- Don't forget to add bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="dist/css/switcher.css" />
+```
+
+##### Bower:
+
+```shell
+$ bower install ios-switcher
+```
+
+---
+
+## Usage
+
+```html
+<div class="form-switcher form-switcher-md-phone">
+	<input type="checkbox" name="switcher" id="switcher">
+	<label class="switcher" for="switcher"></label>
+</div>
+```
 
 
 # Licence
