@@ -1,0 +1,34 @@
+/**
+ * IMPORTANT
+ * 
+ * iOS Switcher uses Bootstrap grid (http://getbootstrap.com/css/#grid)
+ */
+
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-phone:               $screen-xs !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-tablet:              $screen-sm !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-desktop:             $screen-md !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-desktop:          $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm - 1) !default;
+$screen-sm-max:              ($screen-md - 1) !default;
+$screen-md-max:              ($screen-lg - 1) !default;
+
+
+// iOS Switcher colors
+$sw-background-color: 		 #ffffff;
+$sw-border-color: 			 #e6e6e6;
+$sw-active-color: 			 $sw-border-color;
+$sw-checked-color: 			 #16b85f;
+$sw-disabled-checked-color:  #cccccc;

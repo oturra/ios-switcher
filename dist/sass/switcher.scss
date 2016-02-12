@@ -1,0 +1,94 @@
+@import 'compass';
+@import 'variables';
+@import 'switcher-mixin';
+
+
+
+
+// =============
+// FORM SWITCHER (Apple like switcher)
+// =============
+
+// Default syntax
+// <div class="form-switcher">
+// 	<input type="checkbox" name="switcher-lg" id="switcher-lg">
+// 	<label class="switcher" for="switcher-lg">
+// 		<small></small>
+// 	</label>
+// </div>
+
+.form-switcher {
+	input[type="checkbox"] {
+		display: none;
+		&:disabled + .switcher {
+			opacity: 0.6;
+			cursor: not-allowed;
+			@include box-shadow(0px 0px 0px transparent !important);
+		}
+		&:checked:disabled + .switcher {
+			border-color: $sw-disabled-checked-color !important;
+			@include box-shadow(0px 0px 0px 15px $sw-disabled-checked-color inset !important);
+		}
+		&:checked + .switcher {
+			@include transition(box-shadow .2s ease-out, border-color .2s ease-out .02s);
+		}
+	}
+	.switcher {
+		background: $sw-background-color;
+		border: 2px solid darken($sw-background-color, 10%);
+		padding: 0;
+		position: relative;
+		display: block;
+		cursor: pointer;
+		@include border-radius(100px);
+		@include transition(box-shadow .2s ease-out .02s, border-color .2s ease-out);
+		&:after {
+			background: $sw-background-color;
+			position: absolute;
+			top: 0;
+			left: 0;
+			content: "";
+			@include transform(translateX(0));
+			@include transition(all .2s ease-out);
+			@include box-shadow(0 1px 3px rgba(#000000, 0.4));
+			@include border-radius(100px);
+		}
+	}
+	
+	// default size
+	@include switcher-size(43px, 21px);
+
+	// switcher sizes
+	&.form-switcher-sm {
+		@include switcher-size(31px, 14px);
+	}
+	&.form-switcher-lg {
+		@include switcher-size(53px, 26px);
+	}
+
+	// phone optional sizes
+	@media (max-width: $screen-xs-max) {
+		&.form-switcher-sm-phone {
+			@include switcher-size(31px, 14px);
+		}
+		&.form-switcher-md-phone {
+			@include switcher-size(43px, 21px);
+		}
+		&.form-switcher-lg-phone {
+			@include switcher-size(53px, 26px);
+		}
+	}
+
+	// tablet optional sizes
+	@media (max-width: $screen-sm-max) {
+		&.form-switcher-sm-tablet {
+			@include switcher-size(31px, 14px);
+		}
+		&.form-switcher-md-tablet {
+			@include switcher-size(43px, 21px);
+		}
+		&.form-switcher-lg-tablet {
+			@include switcher-size(53px, 26px);
+		}
+	}
+}
